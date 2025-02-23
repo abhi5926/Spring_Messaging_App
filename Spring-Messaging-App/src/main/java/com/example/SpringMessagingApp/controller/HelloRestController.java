@@ -32,5 +32,11 @@ public class HelloRestController {
         return "Hello " + firstName + " " + lastName + "!";
     }
    
+     //UC5
+     @PutMapping("/put/{firstName}")
+    public String sayHello(@PathVariable String firstName, @RequestParam(value = "lastName") String lastName) {
+        return "Hello " + firstName + " " + lastName + " from BridgeLabz!";
+    }
+   
 }
 
