@@ -17,5 +17,13 @@ public class HelloRestController {
     public String sayHello(@RequestParam(value = "name") String name) {
         return " Hello " + name + " ! ";
     }
+    
+    //UC3
+
+    @PostMapping("/post")
+    public String sayHello(@RequestBody User user) {
+        return "Hello " + user.getFirstName() + " " + user.getLastName() + "!";
+    }
+   
 }
 
